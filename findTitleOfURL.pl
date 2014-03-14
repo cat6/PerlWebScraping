@@ -31,8 +31,9 @@ my @lines = split /\n/, $content;
 foreach my $line (@lines)
 {
    # If the line contains <title>, print the line
-   if ($line =~ /<title>/)
+   if ($line =~ /<title>/i)
    {
       print $line . "\n";
+      last;
    }                        
 }
